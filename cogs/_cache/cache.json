@@ -1,0 +1,45 @@
+{
+      "flag": false,
+      "courseopts": [
+            "BComm",
+            "Botany",
+            "Zoology",
+            "BMS",
+            "Chemistry",
+            "Computer Science",
+            "Electronics",
+            "Economics",
+            "Geography",
+            "Geology",
+            "History",
+            "Journalism",
+            "Language",
+            "Mathematics",
+            "Statistics",
+            "Physics",
+            "Pol Science",
+            "Philosophy",
+            "Psychology",
+            "Sociology"
+      ],
+      "clubopts": [
+            "Sci & Tech",
+            "Coding",
+            "Gaming",
+            "Reading",
+            "Finance",
+            "Artist",
+            "Anime",
+            "Movie",
+            "Music"
+      ],
+      "Idcache": {
+            "logschannelId": 922878273560657951,
+            "guildId": 807289284137975868,
+            "channelId": 912411661485359194,
+            "messageId": {
+                  "course": 917372369381765150,
+                  "club": 917372377158021170
+            }
+      }
+}
