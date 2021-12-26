@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 from discord.ext.commands.core import has_role, has_permissions
-from discord.errors import NotFound
+from discord.errors import NotFound, Forbidden
 
 import json
 
@@ -50,11 +50,9 @@ class MySelect(discord.ui.Select):
             for optionselected in self.values:
                 if optionselected == "Geography" or optionselected == "Geology":
                     optionselected= "Geography | Geology"
-                    # courserole= discord.utils.get(ctx.guild.roles, name= "Geography | Geology")
 
                 if optionselected == "Mathematics" or optionselected == "Statistics":
                     optionselected= "Math & Stats"
-                    # courserole= discord.utils.get(ctx.guild.roles, name= "Math & Stats")
                 
                 # fetch role for selected option
                 try:
@@ -68,21 +66,15 @@ class MySelect(discord.ui.Select):
                         ephemeral=True)
                     continue
                     
-                except Exception as e:
-                    await interaction.response.send_message(
-                        f'{interaction.user.mention} an Unknown Error occured in Roles: {e}',
-                        ephemeral=True)
-                    continue
-                
                 else:
                     # assign role to the user
                     try:
                         await interaction.user.add_roles(optionrole)
                         print(interaction.user, optionrole)
 
-                    except Exception as e:
+                    except Forbidden:
                         await interaction.response.send_message(
-                            f"{interaction.user.mention} I couldn't assign you {optionrole} role. Please Try again!\nError: {e}",
+                            f"{interaction.user.mention} I am missing permissions to assign roles! Please contact admin",
                             ephemeral=True)
                         continue
                     else:
