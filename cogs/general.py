@@ -84,6 +84,21 @@ class general(commands.Cog):
         helpEmbed.add_field(name= f"{prefix}refresh",
                             value= "To manually refresh the menus",
                             inline=True)
+        helpEmbed.add_field(name= f"{prefix}loadnews",
+                            value= "Loads spotlight news from website",
+                            inline=True)
+        helpEmbed.add_field(name= space,
+                            value= space,
+                            inline=True)
+        helpEmbed.add_field(name= f"{prefix}setch",
+                            value= "Set channel for sending new announcements",
+                            inline=True)
+        helpEmbed.add_field(name= f"{prefix}dumpdb",
+                            value= "Dump the json Database file",
+                            inline=True)
+        helpEmbed.add_field(name= space,
+                            value= space,
+                            inline=True)
 
         await ctx.send(embed= helpEmbed)
 
