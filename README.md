@@ -1,10 +1,8 @@
-# DUSC-Bot
-Discord bot developed by Delhi University Student Community!
+# Overview
+DUSC bot is a customized discord bot developed by members Delhi University Student Community, as per the needs of the server. It is developed in python language using <a href="https://github.com/Pycord-Development/pycord">Pycord</a> library which is distributed under MIT LICENSE, which can be found <a href="https://github.com/Pycord-Development/pycord/blob/master/LICENSE">here</a>.
 
-# Libraries Used
-1. <a href="https://github.com/Pycord-Development/pycord">Pycord</a> - <a href="https://docs.pycord.dev/en/master/index.html">Documentation</a>
+# Modules
+- Select Menu for self role assignment
+- Moderation Features (chat cleanup)
 
-# Features
-1. Can purge messages in bulk
-2. Drop-Down menu for assigning roles
-3. Ask the bot anything and it will answer you in yes and no
+More modules will be added with time.
