@@ -58,6 +58,8 @@ class MySelect(discord.ui.Select):
                 try:
                     optionrole: discord.Role = discord.utils.get(
                                                 self.guild.roles, name= optionselected)
+                    default_role: discord.Role = discord.utils.get(
+                                                self.guild.roles, name= "citizens")
                     # await interaction.send(courserole.mention)
 
                 except NotFound:
@@ -70,7 +72,8 @@ class MySelect(discord.ui.Select):
                     # assign role to the user
                     try:
                         await interaction.user.add_roles(optionrole)
-                        print(interaction.user, optionrole)
+                        await interaction.user.add_roles(default_role)
+                        print(interaction.user, optionrole, default_role)
 
                     except Forbidden:
                         await interaction.response.send_message(
